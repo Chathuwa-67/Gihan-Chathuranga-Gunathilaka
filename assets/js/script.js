@@ -157,3 +157,18 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+/*Meka mage site ek */
+
+document.addEventListener("contextmenu", (e) => e.preventDefault()); // Disable right-click
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && (e.key === "u" || e.key === "U")) {
+    e.preventDefault(); // Prevent Ctrl+U (View Source)
+  }
+  if (e.ctrlKey && (e.key === "s" || e.key === "S")) {
+    e.preventDefault(); // Prevent Ctrl+S (Save Page)
+  }
+  if (e.ctrlKey && e.shiftKey && e.key === "i") {
+    e.preventDefault(); // Prevent Ctrl+Shift+I (DevTools)
+  }
+});
